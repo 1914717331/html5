@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button"@click="rdmNumber=Math.ceil(Math.random()*10)%7;" name="" id="" value="随机抽取" />
+			<!-- <div v-for="student in students">
+				<div v-if="userNumber==student.code"> -->
+					{{countrys[rdmNumber]}}
+					<!-- 姓名是:	{{student.name}}
+					<br>
+					学号是:	{{student.code}} -->
+			<!-- 	</div>	
+			</div> -->
+		</div>
+		
+		<script type="text/javascript">
+			let v=new Vue({
+				el:'#app',
+				data:{
+					rdmNumber:'1',
+					countrys:[
+						{name:'中国',city:'北京',code:'480'},
+						{name:'英国',city:'伦敦',code:'10'},
+						{name:'法国',city:'巴黎',code:'9900'},
+						{name:'澳大利亚',city:'堪培拉',code:'232'},
+						{name:'德国',city:'柏林',code:'1554'},
+						{name:'黎巴嫩',city:'贝鲁特',code:'452'},
+						{name:'美国',city:'华盛顿',code:'1564'}
+						
+						]
+				}
+			})
+		</script>
+		
+	</body>
+</html>
